@@ -210,12 +210,13 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <warName>javaspringgranny</warName>
+                    <warName>cloud-granny</warName>
                 </configuration>
             </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
 				<configuration>
 					<source>${java-version}</source>
 					<target>${java-version}</target>
