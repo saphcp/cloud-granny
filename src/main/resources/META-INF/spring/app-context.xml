@@ -42,4 +42,13 @@
 
 	<bean id="jpaDialect" class="org.springframework.orm.jpa.vendor.EclipseLinkJpaDialect" />
 	
+	<beans profile="test">
+		<bean id="dataSource" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
+	        <property name="driverClassName" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+	        <property name="url" value="jdbc:derby:memory:DemoDB;create=true"/>
+	        <property name="username" value="demo"/>
+	        <property name="password" value="demo"/>
+    	</bean>
+	</beans>
+	
 </beans>
